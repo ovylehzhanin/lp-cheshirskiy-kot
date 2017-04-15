@@ -1,0 +1,123 @@
+.popup
+    position: relative
+    width: auto
+    max-width: 650px
+    margin: 20px auto
+
+    background-color: whitesmoke
+    box-shadow: 1px 1.7px 10px rgba(0, 0, 0, 0.2)
+
+    &--big
+        max-width: 960px
+
+    &__header
+        padding: 32px 13%
+        text-align: center
+        background-color: #663289
+
+    &__title
+        @extend %title-white
+        font-size: $fz-subtitle
+        line-height: em(24, 18)
+
+    &__main
+        padding: 40px 11% 50px 11%
+
+    
+    &__footer
+        padding: 0 25%
+        padding-bottom: 50px
+        text-align: center
+        p
+            margin: 0
+            font-style: italic
+            line-height: em(18, 14)
+
+    .fields-wrap
+        display: flex
+        justify-content: space-between
+        margin-bottom: 12px
+
+        +r(step3)
+            flex-direction: column
+            justify-content: center
+
+
+    .btn-main
+        padding: 10.5px 28px
+
+    
+    &.make-room
+        padding-bottom: 0
+
+
+    label
+        width: 240px
+
+        +r(step3)
+            width: 100%
+
+    .l-right
+        label
+            width: 180px
+            
+
+.ui-selectmenu-menu 
+   z-index: 9999
+
+.mfp-bg
+    background-color: rgba(#9d9d9d, 0.7)
+
+button.mfp-close
+    font-size: 0
+    +s($i-close)
+
+    position: absolute
+    top: 8px
+    right: 9px
+
+    &:active
+        top: 10px
+
+
+
+
+
+
+//Animation Zoom out
+.mfp-zoom-out 
+
+    .mfp-with-anim 
+        opacity: 0
+        transition: all 0.3s ease-in-out
+        transform: scale(1.3)
+
+  
+    &.mfp-bg 
+        opacity: 0
+        transition: all 0.3s ease-out
+  
+    &.mfp-ready 
+
+        .mfp-with-anim 
+            opacity: 1
+            transform: scale(1)
+    
+        &.mfp-bg 
+            opacity: 0.8
+    
+    &.mfp-removing 
+    
+        .mfp-with-anim 
+            transform: scale(1.3)
+            opacity: 0
+    
+        &.mfp-bg 
+            opacity: 0
+
+
+
+
+    
+  
+  

@@ -1,0 +1,57 @@
+
+$i-clock-name: 'i-clock'
+$i-clock-x: 0px
+$i-clock-y: 0px
+$i-clock-offset-x: 0px
+$i-clock-offset-y: 0px
+$i-clock-width: 71px
+$i-clock-height: 69px
+$i-clock-total-width: 96px
+$i-clock-total-height: 69px
+$i-clock-image: '../img/sprite.png'
+$i-clock: (0px, 0px, 0px, 0px, 71px, 69px, 96px, 69px, '../img/sprite.png', 'i-clock', )
+$i-close-name: 'i-close'
+$i-close-x: 76px
+$i-close-y: 0px
+$i-close-offset-x: -76px
+$i-close-offset-y: 0px
+$i-close-width: 20px
+$i-close-height: 20px
+$i-close-total-width: 96px
+$i-close-total-height: 69px
+$i-close-image: '../img/sprite.png'
+$i-close: (76px, 0px, -76px, 0px, 20px, 20px, 96px, 69px, '../img/sprite.png', 'i-close', )
+$spritesheet-width: 96px
+$spritesheet-height: 69px
+$spritesheet-image: '../img/sprite.png'
+$spritesheet-sprites: ($i-clock, $i-close, )
+$spritesheet: (96px, 69px, '../img/sprite.png', $spritesheet-sprites, )
+
+
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+@mixin sprite-image($sprite)
+  $sprite-image: nth($sprite, 9)
+  background-image: url(#{$sprite-image})
+
+@mixin sprite($sprite)
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)
+
+
+@mixin sprites($sprites)
+  @each $sprite in $sprites
+    $sprite-name: nth($sprite, 10)
+    .#{$sprite-name}
+      @include sprite($sprite)

@@ -1,0 +1,22 @@
+{
+  "name": "lp-cheshirskiy-kot",
+  "version": "1.0.0",
+  "authors": [
+    "Victor Babiy (victorAA) <victor.a.babiy@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "normalize-css": "^5.0.0",
+    "jquery": "2",
+    "animate.css": "^3.5.2",
+    "aos": "^2.1.1",
+    "countUp.js": "^1.7.1"
+  }
+}

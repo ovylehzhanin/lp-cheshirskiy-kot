@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чеширский Кот</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__top">
+          <div class="icon-menu">
+            <div class="open">
+              <svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 10h24c1.104 0 2-.896 2-2s-.896-2-2-2H4c-1.104 0-2 .896-2 2s.896 2 2 2zm24 4H4c-1.104 0-2 .896-2 2s.896 2 2 2h24c1.104 0 2-.896 2-2s-.896-2-2-2zm0 8H4c-1.104 0-2 .896-2 2s.896 2 2 2h24c1.104 0 2-.896 2-2s-.896-2-2-2z"> </path>
+              </svg>
+            </div>
+            <div class="close">
+              <svg height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.043 11.667L22.61 5.1c.962-.963.962-2.54 0-3.502l-.876-.875c-.963-.964-2.54-.964-3.502 0L11.666 7.29 5.1.723c-.963-.963-2.54-.963-3.502 0l-.876.875c-.962.963-.962 2.54 0 3.502l6.566 6.566-6.566 6.567c-.962.963-.962 2.54 0 3.5l.876.876c.963.96 2.54.96 3.5 0l6.568-6.57 6.566 6.565c.963.962 2.54.962 3.502 0l.875-.876c.96-.963.96-2.54 0-3.5l-6.57-6.567z"></path>
+              </svg>
+            </div>
+          </div>
+          <nav class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item"><a class="header__menu-link" href="#rooms">Номера</a></li>
+              <li class="header__menu-item"><a class="header__menu-link" href="#reviews">Отзывы</a></li>
+              <li class="header__menu-item"><a class="header__menu-link" href="#news">Новости</a></li>
+            </ul>
+          </nav>
+          <div class="logo" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800"><a href="/"><img class="logo__image" src="img/logo.svg" width="176" height="84" alt="Лого Чеширский кот"></a></div>
+          <div class="phone"><a class="phone__link" href="tel:+70997689935">+7 (099) 768-99-35   </a></div>
+          <div class="callback"><a class="callback__btn open-popup" href="#popup-callback" data-effect="mfp-zoom-out"><span>Заказать звонок</span></a></div>
+        </div>
+        <div class="header__about" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
+          <h1 class="header__about-title">Cheshire Cat:</h1>
+          <p class="header__about-subtitle">хостел в Сочи в 8 минутах ходьбы от пляжа</p>
+          <ul class="header__about-list">
+            <li class="header__about-item" data-aos="fade-right" data-aos-delay="900"><i class="fa fa-check" aria-hidden="true"></i> <span>300 метров от парка «Ривьера» и Зеленого Театра, 400 - от океанариума «Тайны океана»</span></li>
+            <li class="header__about-item" data-aos="fade-right" data-aos-delay="1200"><i class="fa fa-check" aria-hidden="true"></i> <span>Круглосуточное видеонаблюдение внутри и снаружи здания, охрана территории</span></li>
+            <li class="header__about-item" data-aos="fade-right" data-aos-delay="1500"><i class="fa fa-check" aria-hidden="true"></i> <span>Ряд бесплатных услуг, многоязычный персонал и еженедельные праздники</span></li>
+          </ul><a class="btn btn-white open-popup" href="#popup-order" data-effect="mfp-zoom-out">Забронировать номер <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </header>
+    <seection class="gallery">
+      <div class="gallery__scene">
+        <div class="gallery__inner">
+          <h2 class="gallery__title">Галерея</h2>
+          <div class="gallery__slider">
+            <div class="gallery__slider-item"> 
+              <div class="gallery__slider-image"><img class="logo__image" src="img/tmp/slide-01.jpg" alt="Слайд"></div>
+              <div class="gallery__slider-image"><img class="logo__image" src="img/tmp/slide-02.jpg" alt="Слайд"></div>
+              <div class="gallery__slider-image"><img class="logo__image" src="img/tmp/slide-03.jpg" alt="Слайд"></div>
+            </div>
+            <div class="gallery__slider-item"> 
+              <div class="gallery__slider-image"><img class="logo__image" src="img/tmp/slide-01.jpg" alt="Слайд"></div>
+              <div class="gallery__slider-image"><img class="logo__image" src="img/tmp/slide-02.jpg" alt="Слайд"></div>
+              <div class="gallery__slider-image"><img class="logo__image" src="img/tmp/slide-03.jpg" alt="Слайд"></div>
+            </div>
+            <div class="gallery__slider-item"> 
+              <div class="gallery__slider-image"><img class="logo__image" src="img/tmp/slide-01.jpg" alt="Слайд"></div>
+              <div class="gallery__slider-image"><img class="logo__image" src="img/tmp/slide-02.jpg" alt="Слайд"></div>
+              <div class="gallery__slider-image"><img class="logo__image" src="img/tmp/slide-03.jpg" alt="Слайд"></div>
+            </div>
+            <div class="gallery__slider-item"> 
+              <div class="gallery__slider-image"><img class="logo__image" src="img/tmp/slide-01.jpg" alt="Слайд"></div>
+              <div class="gallery__slider-image"><img class="logo__image" src="img/tmp/slide-02.jpg" alt="Слайд"></div>
+              <div class="gallery__slider-image"><img class="logo__image" src="img/tmp/slide-03.jpg" alt="Слайд"></div>
+            </div>
+            <div class="gallery__slider-item"> 
+              <div class="gallery__slider-image"><img class="logo__image" src="img/tmp/slide-01.jpg" alt="Слайд"></div>
+              <div class="gallery__slider-image"><img class="logo__image" src="img/tmp/slide-02.jpg" alt="Слайд"></div>
+              <div class="gallery__slider-image"><img class="logo__image" src="img/tmp/slide-03.jpg" alt="Слайд"></div>
+            </div>
+          </div>
+          <div class="gallery__slider--response">
+            <div class="gallery__slider-item"> 
+              <div class="gallery__slider-image"><img class="logo__image" src="img/tmp/slide-01.jpg" alt="Слайд"></div>
+            </div>
+            <div class="gallery__slider-item"> 
+              <div class="gallery__slider-image"><img class="logo__image" src="img/tmp/slide-02.jpg" alt="Слайд"></div>
+            </div>
+            <div class="gallery__slider-item"> 
+              <div class="gallery__slider-image"><img class="logo__image" src="img/tmp/slide-03.jpg" alt="Слайд"></div>
+            </div>
+            <div class="gallery__slider-item"> 
+              <div class="gallery__slider-image"><img class="logo__image" src="img/tmp/slide-01.jpg" alt="Слайд"></div>
+            </div>
+            <div class="gallery__slider-item"> 
+              <div class="gallery__slider-image"><img class="logo__image" src="img/tmp/slide-02.jpg" alt="Слайд"></div>
+            </div>
+          </div>
+        </div>
+        <div class="gallery__scence-item layer" data-depth="0.30">
+          <div class="gallery__scene-bg"></div>
+        </div>
+        <div class="gallery__scence-item layer" data-depth="0.80">
+          <div class="gallery__scene-bg--main"></div>
+        </div>
+      </div>
+    </seection>
+    <section class="company-numbers">
+      <div class="company-numbers__inner">
+        <h2 class="company-numbers__title">Cheshire Cat <br><span> в цифрах</span></h2>
+        <div class="company-numbers__items">
+          <div class="company-numbers__item">
+            <p class="company-numbers__item-number" id="num-one" data-aos="fade" data-aos-delay="200" data-aos-duration="1200" data-aos-once="true">600</p>
+            <p class="company-numbers__item-desc">Метров до моря,<br> находится у набережной реки</p>
+          </div>
+          <div class="company-numbers__item"> 
+            <p class="company-numbers__item-number" id="num-two" data-aos="fade" data-aos-delay="400" data-aos-duration="1200" data-aos-once="true">5</p>
+            <p class="company-numbers__item-desc">видов комнат,<br> включая VIP-номер</p>
+          </div>
+          <div class="company-numbers__item"> 
+            <p class="company-numbers__item-number" id="num-three" data-aos="fade" data-aos-delay="600" data-aos-duration="1200" data-aos-once="true"><i class="fa fa-arrow-up" aria-hidden="true"></i> 230</p>
+            <p class="company-numbers__item-desc">положительных отзывов от<br> постояльцев</p>
+          </div>
+          <div class="company-numbers__item"> 
+            <p class="company-numbers__item-number" id="num-four" data-aos="fade" data-aos-delay="800" data-aos-duration="1200" data-aos-once="true">9,6</p>
+            <p class="company-numbers__item-desc">Рейтинг на Booking.com <br>9,6 из 10</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="features">
+      <div class="features__inner">
+        <h2 class="features__title">Cheshire Cat: <br><span>неисчезающая улыбка - фирменный знак наших постояльцев</span></h2>
+        <div class="features__items">
+          <div class="features__item features__item--first" data-aos="flip-left" data-aos-delay="500" data-aos-duration="600">
+            <div class="image-wrap"><img src="img/features-01.jpg" alt="Красивый кот"></div>
+          </div>
+          <div class="features__item features__item--second" data-aos="flip-left" data-aos-delay="1000" data-aos-duration="600">
+            <div class="image-wrap"><img src="img/features-02.jpg" alt="Наши приемущества"></div>
+            <h3 class="features__item-title">Еженедельные мероприятия и конкурсы,</h3>
+            <p class="features__item-desc">в том числе воскресные brunches, ярмарки и распродажи - нашим постояльцам некогда скучать</p>
+          </div>
+          <div class="features__item features__item--third" data-aos="flip-left" data-aos-delay="1500" data-aos-duration="600">
+            <div class="image-wrap"><img src="img/features-03.jpg" alt="Наши приемущества"></div>
+            <h3 class="features__item-title">Комфорт за адекватную цену:</h3>
+            <p class="features__item-desc">согласно отзывам постояльцев, оставленных на сайте Booking.com, соотношение цена/качество - 9,8 из 10</p>
+          </div>
+          <div class="features__item features__item--four" data-aos="flip-left" data-aos-delay="1000" data-aos-duration="600">
+            <div class="image-wrap"><img src="img/features-04.jpg" alt="Наши приемущества"></div>
+            <h3 class="features__item-title">Отзывчивый и доброжелательный персонал:</h3>
+            <p class="features__item-desc">наши сотрудники с радостью расскажут вам о сочинских достопримечательностях на русском, английском или итальянском языке</p>
+          </div>
+          <div class="features__item features__item--fifth" data-aos="flip-left" data-aos-delay="1500" data-aos-duration="600">
+            <div class="image-wrap"><img src="img/features-05.jpg" alt="Наши приемущества"></div>
+            <h3 class="features__item-title">Работа в режиме нон-стоп:</h3>
+            <p class="features__item-desc">мы открыты для вас 24 часа в сутки и 7 дней в неделю, при этом гарантируем безопасность - хостел находится в бизнес-центре с круглосуточной охраной</p>
+          </div>
+          <div class="features__item features__item--six" data-aos="flip-left" data-aos-delay="2000" data-aos-duration="600">
+            <div class="image-wrap"><img src="img/features-06.jpg" alt="Наши приемущества"></div>
+            <h3 class="features__item-title">Уютные и комфортабельные номера на любой вкус:</h3>
+            <p class="features__item-desc">чистые и светлые комнаты с превосходной звукоизоляцией, включая смешанные "восьмерки" и VIP-апартаменты для двоих</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="our-rooms" id="rooms">
+      <div class="our-rooms__inner">
+        <h2 class="our-rooms__title">Наши номера</h2>
+        <div class="our-rooms__items">
+          <div class="our-rooms__item our-rooms__item--first"><img src="img/tmp/our-rooms-01.png" alt="Комнаты"></div><a class="our-rooms__item" href="#">
+            <div class="image-wrap"><img src="img/tmp/our-rooms-02.jpg" alt="Комнаты"></div>
+            <div class="our-rooms__item-footer">
+              <p class="our-rooms__item-text"><strong>4-местная</strong><br> комната для девушек</p>
+            </div>
+            <div class="our-rooms__item-hover">
+              <p>Узнать о свободных местах</p>
+            </div></a><a class="our-rooms__item" href="#">
+            <div class="image-wrap"><img src="img/tmp/our-rooms-03.jpg" alt="Комнаты"></div>
+            <div class="our-rooms__item-footer">
+              <p class="our-rooms__item-text"><strong>6-местная</strong><br> комната для девушек</p>
+            </div>
+            <div class="our-rooms__item-hover">
+              <p>Узнать о свободных местах</p>
+            </div></a><a class="our-rooms__item" href="#">
+            <div class="image-wrap"><img src="img/tmp/our-rooms-04.jpg" alt="Комнаты"></div>
+            <div class="our-rooms__item-footer">
+              <p class="our-rooms__item-text"><strong>Номер для 1 или 2</strong><br>  постояльцев</p>
+            </div>
+            <div class="our-rooms__item-hover">
+              <p>Узнать о свободных местах</p>
+            </div></a><a class="our-rooms__item" href="#">
+            <div class="image-wrap"><img src="img/tmp/our-rooms-05.jpg" alt="Комнаты"></div>
+            <div class="our-rooms__item-footer">
+              <p class="our-rooms__item-text"><strong>8-местная</strong><br>  смешанная комната</p>
+            </div>
+            <div class="our-rooms__item-hover">
+              <p>Узнать о свободных местах</p>
+            </div></a><a class="our-rooms__item" href="#">
+            <div class="image-wrap"><img src="img/tmp/our-rooms-06.jpg" alt="Комнаты"></div>
+            <div class="our-rooms__item-footer">
+              <p class="our-rooms__item-text"><strong>8-местная</strong><br> комната для девушек</p>
+            </div>
+            <div class="our-rooms__item-hover">
+              <p>Узнать о свободных местах</p>
+            </div></a>
+        </div>
+      </div>
+    </section>
+    <section class="our-bonuses">
+      <div class="our-bonuses__inner">
+        <h2 class="our-bonuses__title">Несколько приятных <br> <span>бонусов для вас</span></h2>
+      </div>
+      <div class="our-bonuses__item">
+        <div class="our-bonuses__inner">
+          <div class="our-bonuses__item-text" data-aos="fade" data-aos-duration="1000" data-aos-delay="200">
+            <h3 class="our-bonuses__item-title">Комфортные условия проживания</h3>
+            <p class="our-bonuses__item-desc">Слаженная работа систем кондиционирования и отопления обеспечивает оптимальный микроклимат в любое время года. На территории есть общий лаундж, вздании бизнес-центра - банкомат.</p>
+          </div>
+          <div class="our-bonuses__item-image" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200"><img src="img/tmp/our-bonuses-01.png" alt="Наши бонусы"></div>
+        </div>
+      </div>
+      <div class="our-bonuses__item">
+        <div class="our-bonuses__inner">
+          <div class="our-bonuses__item-text" data-aos="fade" data-aos-duration="1000" data-aos-delay="200">
+            <h3 class="our-bonuses__item-title">Регулярная профессиональная <br>уборка</h3>
+            <p class="our-bonuses__item-desc">Каждый день с 11.00 до 15.00 территория хостела и комнаты подвергаются тщательному клинингу. </p>
+          </div>
+          <div class="our-bonuses__item-image" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200"><img src="img/tmp/our-bonuses-02.png" alt="Наши бонусы"></div>
+        </div>
+      </div>
+      <div class="our-bonuses__item">
+        <div class="our-bonuses__inner">
+          <div class="our-bonuses__item-text" data-aos="fade" data-aos-duration="1000" data-aos-delay="200">
+            <h3 class="our-bonuses__item-title">Вкусности без ограничений</h3>
+            <p class="our-bonuses__item-desc">Чай, кофе, вода из куллера, печеньки и конфеты гарантированы каждому постояльцу. В вашем распоряжении целая кухня.</p>
+          </div>
+          <div class="our-bonuses__item-image" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200"><img src="img/tmp/our-bonuses-03.png" alt="Наши бонусы"></div>
+        </div>
+      </div>
+      <div class="our-bonuses__item">
+        <div class="our-bonuses__inner">
+          <div class="our-bonuses__item-text" data-aos="fade" data-aos-duration="1000" data-aos-delay="200">
+            <h3 class="our-bonuses__item-title">Все, что нужно для домашнего комфорта:</h3>
+            <p class="our-bonuses__item-desc">бесплатные сушка и глажка, полотенца, одноразовые тапочки, личные шкафчики запираемые на ключ, и Wi-Fi на всей территории хостела. </p>
+          </div>
+          <div class="our-bonuses__item-image" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200"><img src="img/tmp/our-bonuses-04.png" alt="Наши бонусы"></div>
+        </div>
+      </div>
+      <div class="our-bonuses__footer">
+        <div class="our-bonuses__inner">
+          <div class="our-bonuses__content">
+            <div class="icon-center"><i class="i-clock"></i></div>
+            <h3 class="our-bonuses__footer-title" data-aos="fade" data-aos-duration="800" data-aos-delay="200">Нужно больше подробностей?</h3>
+            <p class="our-bonuses__footer-desc" data-aos="fade" data-aos-duration="800" data-aos-delay="200">Получите развернутую консультацию по своему вопросу в любой день и время суток!</p>
+            <div class="btn-center"><a class="btn btn-main open-popup" href="#popup-consultation" data-effect="mfp-zoom-out">Проконсультироваться</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="reviews" id="reviews">
+      <div class="reviews__inner">
+        <h2 class="reviews__title">Отзывы <br><span>наших постояльцев</span></h2>
+        <div class="sliders-wrap">
+          <div class="reviews-slider">
+            <div class="reviews-slider__item">
+              <div class="reviews-slider__image"><img src="img/tmp/review-01.jpg" alt="Фото"></div>
+            </div>
+            <div class="reviews-slider__item">
+              <div class="reviews-slider__image"><img src="img/tmp/review-02.jpg" alt="Фото"></div>
+            </div>
+            <div class="reviews-slider__item">
+              <div class="reviews-slider__image"><img src="img/tmp/review-03.jpg" alt="Фото"></div>
+            </div>
+            <div class="reviews-slider__item">
+              <div class="reviews-slider__image"><img src="img/tmp/review-01.jpg" alt="Фото"></div>
+            </div>
+            <div class="reviews-slider__item">
+              <div class="reviews-slider__image"><img src="img/tmp/review-02.jpg" alt="Фото"></div>
+            </div>
+          </div>
+          <div class="reviews-slider-for">
+            <div class="reviews-slider-for__item"><strong>Natalya, Россия</strong>
+              <p>Чеширский кот - прекрасное соотношение цена/качество. Очень дружелюбные администраторы, всегда пойдут на встречу при возникновении каких-либо трудностей. В комнате всегда было чистенько, кондиционер работал исправно (в жуткую жару хостел был оазисом счастья))) "ЧК" расположен в самом центре Сочи, что очень удобно для пешего туриста. Несколькими словами: отличное место для молодежи. </p>
+            </div>
+            <div class="reviews-slider-for__item"><strong>Natalya, Россия</strong>
+              <p>Чеширский кот - прекрасное соотношение цена/качество. Очень дружелюбные администраторы, всегда пойдут на встречу при возникновении каких-либо трудностей. В комнате всегда было чистенько, кондиционер работал исправно (в жуткую жару хостел был оазисом счастья))) "ЧК" расположен в самом центре Сочи, что очень удобно для пешего туриста. Несколькими словами: отличное место для молодежи. </p>
+            </div>
+            <div class="reviews-slider-for__item"><strong>Natalya, Россия</strong>
+              <p>Чеширский кот - прекрасное соотношение цена/качество. Очень дружелюбные администраторы, всегда пойдут на встречу при возникновении каких-либо трудностей. В комнате всегда было чистенько, кондиционер работал исправно (в жуткую жару хостел был оазисом счастья))) "ЧК" расположен в самом центре Сочи, что очень удобно для пешего туриста. Несколькими словами: отличное место для молодежи. </p>
+            </div>
+            <div class="reviews-slider-for__item"><strong>Natalya, Россия</strong>
+              <p>Чеширский кот - прекрасное соотношение цена/качество. Очень дружелюбные администраторы, всегда пойдут на встречу при возникновении каких-либо трудностей. В комнате всегда было чистенько, кондиционер работал исправно (в жуткую жару хостел был оазисом счастья))) "ЧК" расположен в самом центре Сочи, что очень удобно для пешего туриста. Несколькими словами: отличное место для молодежи. </p>
+            </div>
+            <div class="reviews-slider-for__item"><strong>Natalya, Россия</strong>
+              <p>Чеширский кот - прекрасное соотношение цена/качество. Очень дружелюбные администраторы, всегда пойдут на встречу при возникновении каких-либо трудностей. В комнате всегда было чистенько, кондиционер работал исправно (в жуткую жару хостел был оазисом счастья))) "ЧК" расположен в самом центре Сочи, что очень удобно для пешего туриста. Несколькими словами: отличное место для молодежи. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="settle">     
+      <div class="settle__inner">
+        <h2 class="settle__title">Как заселиться <br><span>в хостел?  </span></h2>
+        <div class="settle__items">
+          <div class="settle__item">
+            <div class="settle__icon icon-days" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
+              <svg id="svg3826" xmlns="http://www.w3.org/2000/svg" width="48103.075" height="48920.372" viewbox="0 0 12.727272 12.943515" clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+                <g id="sloy4" fill="none" stroke="#15a0cb" stroke-width=".65" stroke-linecap="round" stroke-linejoin="round">
+                  <path class="fil0 str0" id="path3834" d="M.466 2.69c-.322.42-.026 9.04.274 9.597.246.458 11.32.43 11.47-.003.147-.43.29-8.968.104-9.584-.184-.62-10.727-.9-11.848-.01z"></path>
+                  <path class="fil0 str0" id="path3836" d="M2.423 2.26C2.113-.533 5.767.065 4.333 3.687"></path>
+                  <path class="fil0 str0" id="path3838" d="M.33 5.543s9.954-.11 11.726-.004"></path>
+                  <path class="fil0 str0" id="path3840" d="M2.94 8.203c-.073.095-.006 2.056.062 2.182.056.104 2.574.097 2.608 0 .034-.1.066-2.04.024-2.18-.042-.14-2.44-.204-2.694-.002z"></path>
+                  <path class="fil0 str0" id="path3842" d="M7.35 2.073c-.31-2.79 3.345-2.193 1.91 1.43"></path>
+                </g>
+              </svg>
+            </div>
+            <p class="settle__item-text">Определяетесь с датой заезда</p>
+          </div>
+          <div class="settle__item">
+            <div class="settle__icon icon-bad" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400">
+              <svg id="svg3388" xmlns="http://www.w3.org/2000/svg" width="53858.929" height="43776.945" viewbox="0 0 14.250175 11.58265" clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+                <path class="fil0" id="path3396" d="M.015 11.485c-.016-.733-.017-1.47-.013-2.2.002-.452.007-.903.02-1.354.008-.3.014-.63.053-.92.04-.32.108-.64.225-.94.066-.17.157-.34.215-.52.037-.11.053-.21.052-.33C.563 4.5.654 1.24.695.76c.077-.903 11.53-1.11 12.86 0 .358.3.132 3.74.128 4.447 0 .116.015.222.052.333.058.173.15.345.215.52.117.304.184.62.226.943.038.3.044.627.053.93.01.45.01.9.01 1.352 0 .732 0 1.468-.02 2.2v.1l-2.13-.006-.01-.1c-.05-1.8.28-1.56-1.57-1.56h-6.8c-1.85 0-1.52-.24-1.566 1.56l-.003.1-2.13.01-.002-.1zm12.865-.68h.575l.003-2.24-6.344-.002H.792l.003 2.24h.575l.06-.674c.11-1.2 1.535-.97 2.383-.97h6.625c.847 0 2.272-.24 2.38.96l.062.67zm.59-3.023c-.004-1.42-.382-2.45-1.84-2.93-1.26-.415-3.17-.488-4.494-.488h-.022c-1.325 0-3.233.073-4.493.487C1.17 5.33.79 6.36.78 7.79h12.69zM7.118 2.62c.03-.017.065-.033.085-.034.113-.023.303-.107.43-.143.355-.1.724-.158 1.093-.183.583-.04 1.186-.04 1.768.007.507.042 1.45.114 1.716.64.166.33.082.992.09 1.4l.627.37c.01-.174.008-.356.01-.526.004-.36.003-.72.002-1.09-.01-.57-.01-1.13-.01-1.7-.36-.52-11.56-.91-11.61.11 0 .57-.01 1.03-.01 1.6v1.09c0 .17 0 .36.01.53l.62-.37c0-.41-.08-1.07.09-1.4.26-.52 1.21-.6 1.71-.64.58-.04 1.18-.04 1.77 0 .37.028.74.08 1.09.186.12.037.32.12.43.144.02 0 .04.015.06.03zm4.424.642c-.507-.278-1.717-.282-2.272-.27-.26.006-1.513.083-1.667.247-.05.05-.04.25-.014.36l2.12.11c.33.02.66.06.99.13.23.05.46.11.7.16.04.01.08.01.12.02l.01-.78zm-8.834 0l.01.776c.04-.006.082-.014.123-.023.24-.047.47-.113.7-.163.33-.07.66-.113 1-.13l2.13-.115c.03-.113.04-.315-.01-.368-.15-.17-1.4-.25-1.66-.25-.55-.02-1.76-.01-2.27.27z" fill="#15a0cb"></path>
+              </svg>
+            </div>
+            <p class="settle__item-text">Выбираете тип комнаты</p>
+          </div>
+          <div class="settle__item">
+            <div class="settle__icon icon-call" data-aos="fade-right" data-aos-duration="800" data-aos-delay="600">
+              <svg id="svg3755" xmlns="http://www.w3.org/2000/svg" width="42922.628" height="49046.479" viewbox="0 0 11.356612 12.976881" clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+                <g id="sloy3" fill="none" stroke="#15a0cb" stroke-width=".65" stroke-linecap="round" stroke-linejoin="round">
+                  <path class="fil0 str0" id="path3763" d="M2.245 2.302c-.354.46-.293 9.3.036 9.912.28.506 6.7.605 6.87.13.166-.476.367-9.355.16-10.034-.202-.68-6.44-.812-7.06-.008z"></path>
+                  <path class="fil0 str0" id="path3765" d="M2.064 9.378s3.396-.8 7.15.137"></path>
+                  <path class="fil0 str0" id="path3767" d="M5.376 10.278c.396-.186.977-.153 1.23.352.163.323.077.9-.395 1.126-.41.2-1.06.027-1.23-.505-.16-.53.19-.87.4-.97z"></path>
+                  <path class="fil0 str0" id="path3769" d="M.325 3.32S.395.28 4.263.325"></path>
+                  <path class="fil0 str0" id="path3771" d="M8.435.35s2.12-.063 2.596 2.5"></path>
+                </g>
+              </svg>
+            </div>
+            <p class="settle__item-text">Звонок администратора</p>
+          </div>
+          <div class="settle__item">
+            <div class="settle__icon icon-gap" data-aos="fade-right" data-aos-duration="800" data-aos-delay="800">
+              <svg id="svg3517" xmlns="http://www.w3.org/2000/svg" width="22515.854" height="43431.87" viewbox="0 0 5.9573197 11.491349" clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+                <path class="fil0" id="path3525" d="M5.945 7.262c0 1.037.01 2.075 0 3.11 0 .188.018.575-.087.74-.01.018-.024.035-.037.053-.11.167-.26.267-.46.306-.17.04-.6.02-.79.02-.52.01-1.04.01-1.57.01H1.42c-.2 0-.58.02-.77-.01-.3-.04-.53-.24-.61-.53-.02-.08-.012-.34-.013-.422-.007-.32-.007-.637-.01-.953C.007 8.617 0 7.66 0 6.71V5.7c0-.708 0-1.415.006-2.123.002-.308-.017-.753.022-1.053C.22 1.042 1.502 0 2.975 0 4.592 0 5.94 1.253 5.947 2.888c.005 1.43-1.922 1.338-1.954.128-.034-1.327-2-1.32-2.035-.05-.016.625.612.91 1.134 1.02.472.1.95.176 1.42.277.284.06.582.136.816.315.13.1.23.22.315.357.406.642.302 1.596.302 2.327zM.78 10.74c.737.024 1.512.005 2.25.004.492 0 .984-.003 1.476-.01.177-.003.484.005.686-.016.015-.248.004-.538.005-.785V8.27c-.003-.544-.006-1.09-.014-1.634-.003-.233.01-.612-.024-.836-.04-.238-.12-.49-.32-.642-.22-.163-1.11-.285-1.4-.338-.36-.064-.75-.14-1.08-.28-.9-.376-1.41-1.194-1.05-2.144.66-1.764 3.33-1.36 3.43.5 0 .09-.01.15.05.22.12.147.37.09.39-.1.07-.532-.16-1.093-.51-1.492C4.25 1.02 3.64.75 2.97.747 1.785.74.765 1.68.76 2.89.756 5 .736 7.112.74 9.222c0 .173-.01 1.23.042 1.517zm3.408-2.08c.206 0 .374.167.374.373s-.168.374-.374.374H1.764c-.206 0-.374-.168-.374-.374s.168-.373.374-.373h2.424zm0-1.04c.206 0 .374.168.374.374s-.168.373-.374.373H1.764c-.206 0-.374-.167-.374-.373s.168-.374.374-.374h2.424z" fill="#15a0cb"></path>
+              </svg>
+            </div>
+            <p class="settle__item-text">Получаете перечень свободных мест</p>
+          </div>
+          <div class="settle__item">
+            <div class="settle__icon icon-lock" data-aos="fade-right" data-aos-duration="800" data-aos-delay="1000">                
+              <svg id="svg3607" xmlns="http://www.w3.org/2000/svg" width="33690.419" height="47083.291" viewbox="0 0 8.9139233 12.457454" clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+                <g id="sloy" fill="none" stroke="#15a0cb" stroke-width=".656" stroke-linecap="round" stroke-linejoin="round">
+                  <path class="fil0 str0" id="path3615" d="M.583 5.218c-.377.49-.312 5.796.04 6.445.29.538 7.526.644 7.7.14.174-.507.388-5.853.17-6.575-.217-.723-7.253-.864-7.91-.01z"></path>
+                  <path class="fil0 str0" id="path3617" d="M1.625 4.627c0-1.015-.06-4.238 2.687-4.298C7.057.27 7.296 3.67 7.177 4.624"></path>
+                  <path class="fil0 str0" id="path3619" d="M3.297 10.536c.193.29 1.97.3 2.15.12.178-.18-.42-2.15-.42-2.15s.716-.55.732-1.268c.012-.656-.69-1.255-1.48-1.298-.82-.045-1.343.567-1.463 1.03-.24.926.313 1.298.656 1.417.17.06-.3 1.97-.18 2.15z"></path>
+                  <path class="fil0 str0" id="path3621" d="M3.046 4.456c0-.612-.03-2.557 1.34-2.593C5.76 1.827 5.876 3.88 5.82 4.456"></path>
+                </g>
+              </svg>
+            </div>
+            <p class="settle__item-text">Бронируете номер</p>
+          </div>
+          <div class="settle__item">
+            <div class="settle__icon icon-case" data-aos="fade-right" data-aos-duration="800" data-aos-delay="1200">
+              <svg id="svg3680" xmlns="http://www.w3.org/2000/svg" width="46213.198" height="46038.497" viewbox="0 0 12.227242 12.181019" clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+                <g id="sloy2" fill="none" stroke="#15a0cb" stroke-width=".672" stroke-linecap="round" stroke-linejoin="round">
+                  <path class="fil0 str0" id="path3688" d="M1.12 4.117c3.53-.292 6.95-.208 10.5.002"></path>
+                  <path class="fil0 str0" id="path3690" d="M4.14.448c.42-.2 1.038-.163 1.308.374.173.343.082.958-.42 1.198-.446.212-1.133.028-1.31-.538-.177-.566.2-.93.42-1.034z"></path>
+                  <path class="fil0 str0" id="path3692" d="M7.582.448c.42-.2 1.04-.163 1.31.374.172.343.08.958-.422 1.198-.445.212-1.132.028-1.31-.538-.176-.566.2-.93.422-1.034z"></path>
+                  <path class="fil0 str0" id="line3694" d="M5.32 1.852L8.597 3.91"></path>
+                  <path class="fil0 str0" id="line3696" d="M4.355 3.868l1.218-.798"></path>
+                  <path class="fil0 str0" id="path3698" d="M1.08 5.463c-.26.067.042 1.428 0 1.763-.042.336-1.553 2.142-.168 3.61 1.386 1.47 9.616 1.093 10.58.38.967-.715-.125-3.738-.167-4.116-.04-.378.42-1.51.21-1.763-.21-.252-7.85-.546-10.455.126z"></path>
+                  <path class="fil0 str0" id="path3700" d="M2.676 7.31s1.68-.46 4.703-.335"></path>
+                </g>
+              </svg>
+            </div>
+            <p class="settle__item-text">Оплачиваете услуги при заселении</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="make-room">      
+      <div class="make-room__inner">
+        <h2 class="make-room__title">Забронируйте места до 30 октября и получите <br><span>скидку 50 рублей на ночь с каждого постояльца!</span></h2>
+        <form action="">
+          <div class="fileds-wrap">
+            <div class="l-left">
+              <div class="filed-title">Выберите дату</div>
+              <div class="filed"><span>С </span>
+                <label><i class="fa fa-calendar" aria-hidden="true"></i>
+                  <input class="datepicker" type="text" value="22/03/2016">
+                </label>
+              </div>
+              <div class="filed"><span>По </span>
+                <label>
+                   <i class="fa fa-calendar" aria-hidden="true"></i>
+                  <input class="datepicker" type="text" value="09/10/2016">
+                </label>
+              </div>
+            </div>
+            <div class="l-center">
+              <div class="filed-title">Желаемое место</div>
+              <label> 
+                <select class="select" name="room">
+                  <option value="Комната №1 (6-местная)">Комната №1 (6-местная)</option>
+                  <option value="Комната №1 (4-местная)">Комната №2 (4-местная)</option>
+                  <option value="Комната №1 (6-местная)">Комната №3 (6-местная)</option>
+                  <option value="Комната №1 (6-местная)">Комната №4 (4-местная)</option>
+                </select>
+              </label>
+              <label><i class="fa fa-phone" aria-hidden="true"></i>
+                <input type="text" placeholder="Введите номер телефона">
+              </label>
+            </div>
+            <div class="l-right">
+              <label><i class="fa fa-user" aria-hidden="true"></i>
+                <input type="text" placeholder="Имя">
+              </label>
+              <label><i class="fa fa-users" aria-hidden="true"></i>
+                <input type="text" placeholder="Кол. постояльцев">
+              </label>
+            </div>
+          </div>
+          <div class="btn-center">
+            <button class="btn btn-main">Найти свободный номер</button>
+          </div>
+        </form>
+      </div>
+      <div class="make-room__footer-inner">       
+        <div class="make-room__footer"> 
+          <p>В течение рабочего дня с Вами свяжется наш администратор и поможет подобрать свободные места, предоставив дополнительную информацию. При подтверждении бронирования нужно оплатить сумму первой ночи</p>
+        </div>
+      </div>
+    </section>
+    <section class="news" id="news">
+      <div class="news__inner">
+        <h2 class="news__title">Новости</h2>
+        <div class="news__items">
+          <div class="news__item" data-aos="flip-left" data-aos-delay="500" data-aos-duration="600">
+            <div class="news__image"><a href="#"><img src="img/tmp/news-01.jpg" alt="Фото новости"></a></div>
+            <div class="news__content">
+              <h3 class="news__item-title"> <a href="#">Во время олимпиады в хостеле Cheshire Cat былизабронированы заранее все места!</a></h3>
+              <p class="news__desc"> Задача организации, в особенности же начало повседневной работы по формированию позиции играет важную роль в формировании модели...</p>
+              <div class="news__footer"><a href="#"> <span>Читать полностью</span><i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+            </div>
+          </div>
+          <div class="news__item" data-aos="flip-left" data-aos-delay="1000" data-aos-duration="600">
+            <div class="news__image"><a href="#"><img src="img/tmp/news-02.jpg" alt="Фото новости"></a></div>
+            <div class="news__content">
+              <h3 class="news__item-title"> <a href="#">Для постояльцев хослела устроили отдых!</a></h3>
+              <p class="news__desc">Задача организации, в особенности же начало повседневной работы по формированию позиции играет важную роль в формировании модели. Задача организации, в особенности же начало...</p>
+              <div class="news__footer"><a href="#"> <span>Читать полностью</span><i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+            </div>
+          </div>
+          <div class="news__item" data-aos="flip-left" data-aos-delay="1500" data-aos-duration="600">
+            <div class="news__image"><a href="#"><img src="img/tmp/news-03.jpg" alt="Фото новости"></a></div>
+            <div class="news__content">
+              <h3 class="news__item-title"> <a href="#">Во время олимпиады в хостеле Cheshire Cat былизабронированы заранее все места!</a></h3>
+              <p class="news__desc">Задача организации, в особенности же начало повседневной работы по формированию позиции играет важную роль в формировании модели...</p>
+              <div class="news__footer"><a href="#"> <span>Читать полностью</span><i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="map">
+      <div id="map">
+        <div class="contacts"> 
+          <h3 class="contacts__title">Cheshire Cat</h3>
+          <p class="contacts__subtitle">ул. Конституции, 18, этаж 3 <br>Сочи, Россия</p><a class="contacts__phone" href="tel:70997689935">+7 (099) 768-99-35</a>
+          <div class="social">
+            <div class="social__item"><a href="#" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a></div>
+            <div class="social__item"><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
+            <div class="social__item"><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+          </div>
+        </div>
+        <div class="map__features"> 
+          <h3 class="map__features-title">Преимущества местоположения</h3>
+          <div class="map__features-image"><img src="img/features-map.jpg" alt="Мини карта"></div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="logo"><a href="http://dimbrowsky.com/" target="_blank"><img src="img/dimbrowsky.png" alt="Студия Дмитрия Димбровского"></a></div>
+        <div class="footer__text">
+          <p> Хотите такой же лендинг? <a href="http://dimbrowsky.com/" target="_blank">Обращайтесь к нам!</a></p>
+        </div>
+      </div>
+    </footer>
+    <div class="popup mfp-with-anim mfp-hide" id="popup-callback">
+      <form action="">
+        <div class="popup__header">
+          <h2 class="popup__title">Введите свои контактные данные, и наш менеджер свяжется с вами в ближайшее время!</h2>
+        </div>
+        <div class="popup__main">
+          <div class="fields-wrap">
+            <label><i class="fa fa-user" aria-hidden="true"></i>
+              <input type="text" placeholder="Имя">
+            </label>
+            <label><i class="fa fa-phone" aria-hidden="true"></i>
+              <input type="text" placeholder="Введите номер телефона" required>
+            </label>
+          </div>
+          <div class="btn-center">
+            <button class="btn btn-main">Отправить</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="popup mfp-with-anim mfp-hide" id="popup-consultation">
+      <form action="">
+        <div class="popup__header">
+          <h2 class="popup__title">Заполните форму  и получите развернутую консультацию нашего специалиста в ближайшее время!</h2>
+        </div>
+        <div class="popup__main">
+          <div class="fields-wrap">
+            <label><i class="fa fa-user" aria-hidden="true"></i>
+              <input type="text" placeholder="Имя">
+            </label>
+            <label><i class="fa fa-phone" aria-hidden="true"></i>
+              <input type="text" placeholder="Введите номер телефона" required>
+            </label>
+          </div>
+          <div class="btn-center">
+            <button class="btn btn-main">Отправить</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="popup popup--big mfp-with-anim mfp-hide make-room" id="popup-order"> 
+      <form action="">
+        <div class="popup__header">
+          <h2 class="popup__title">Выберите дату заезда, тип комнаты и забронируйте у нас место себе и друзьям!</h2>
+        </div>
+        <div class="popup__main">
+          <div class="fileds-wrap">
+            <div class="l-left">
+              <div class="filed-title">Выберите дату</div>
+              <div class="filed"><span>С </span>
+                <label><i class="fa fa-calendar" aria-hidden="true"></i>
+                  <input class="datepicker" type="text" value="22/03/2016">
+                </label>
+              </div>
+              <div class="filed"><span>По </span>
+                <label>
+                   <i class="fa fa-calendar" aria-hidden="true"></i>
+                  <input class="datepicker" type="text" value="09/10/2016">
+                </label>
+              </div>
+            </div>
+            <div class="l-center">
+              <div class="filed-title">Желаемое место</div>
+              <label> 
+                <select class="select-popup" name="room">
+                  <option value="Комната №1 (6-местная)">Комната №1 (6-местная)</option>
+                  <option value="Комната №1 (4-местная)">Комната №2 (4-местная)</option>
+                  <option value="Комната №1 (6-местная)">Комната №3 (6-местная)</option>
+                  <option value="Комната №1 (6-местная)">Комната №4 (4-местная)</option>
+                </select>
+              </label>
+              <label>
+                <input class="clear" type="text" placeholder="Ввести номер карты">
+              </label>
+            </div>
+            <div class="l-right">
+              <div class="filed-title">Дата</div>
+              <label>
+                <input class="datepicker" type="text" value="22/03/2016">
+              </label>
+              <label class="small-label"><span>Количество свободных мест </span>
+                <input type="text" value="4">
+              </label>
+            </div>
+          </div>
+          <div class="btn-center">
+            <button class="btn btn-main">Забронировать номер</button>
+          </div>
+        </div>
+        <div class="popup__footer">
+          <p>Номер Вашей карты нужен только для брони. До непосредственного заезда ваши денежные средства взыматься не будут.</p>
+        </div>
+      </form>
+    </div>
+    <script src="js/main.js"></script>
+    <script>
+      ymaps.ready(function () {
+      var myMap = new ymaps.Map('map', {
+      center: [43.5900890888106,39.73247524946],
+      zoom: 15,
+      controls: []
+      }, {
+      searchControlProvider: 'yandex#search'
+      }),
+      myPlacemark = new ymaps.Placemark([43.59057857453821,39.719621000000004], {
+      iconCaption: 'ул. Конституции, 18, этаж 3',
+      balloonContent: 'Cheshire Cat ул. Конституции, 18, этаж 3'
+      },{
+      preset: 'islands#blueCircleDotIconWithCaption',
+      }),
+      myPlacemark2 = new ymaps.Placemark([43.59057857453821,39.719621000000004], {
+      hintContent: 'ул. Конституции, 18, этаж 3',
+      balloonContent: 'Cheshire Cat ул. Конституции, 18, этаж 3',
+      zIndex: 1000
+      },{
+      iconLayout: 'default#image',
+      iconImageHref: 'img/baloon.png',
+      iconImageSize: [93, 124],
+      iconImageOffset: [3, 5]
+      });
+      myMap.geoObjects.add(myPlacemark);
+      myMap.geoObjects.add(myPlacemark2);
+      });
+    </script>
+  </body>
+</html>

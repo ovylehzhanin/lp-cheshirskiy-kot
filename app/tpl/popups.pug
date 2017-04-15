@@ -1,0 +1,76 @@
+#popup-callback.popup.mfp-with-anim.mfp-hide
+    form(action="")
+        .popup__header
+            h2.popup__title Введите свои контактные данные, и наш менеджер свяжется с вами в ближайшее время!
+        .popup__main
+            .fields-wrap
+                label
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    input(type="text" placeholder="Имя")
+                label
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    input(type="text" placeholder="Введите номер телефона" required)
+            .btn-center
+                button.btn.btn-main Отправить
+
+
+#popup-consultation.popup.mfp-with-anim.mfp-hide
+    form(action="")
+        .popup__header
+            h2.popup__title Заполните форму  и получите развернутую консультацию нашего специалиста в ближайшее время!
+        .popup__main
+            .fields-wrap
+                label
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    input(type="text" placeholder="Имя")
+                label
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    input(type="text" placeholder="Введите номер телефона" required)
+            .btn-center
+                button.btn.btn-main Отправить
+
+                
+
+
+#popup-order.popup.popup--big.mfp-with-anim.mfp-hide.make-room 
+    form(action="")
+        .popup__header
+            h2.popup__title Выберите дату заезда, тип комнаты и забронируйте у нас место себе и друзьям!
+        .popup__main
+            .fileds-wrap
+                .l-left
+                    .filed-title Выберите дату
+                    .filed
+                        span С 
+                        label
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            input.datepicker(type="text" value="22/03/2016")
+                    .filed
+                        span По 
+                        label  
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            input.datepicker(type="text" value="09/10/2016")
+                .l-center
+                    .filed-title Желаемое место
+                    label 
+                        select.select-popup(name="room")
+                            option(value="Комната №1 (6-местная)") Комната №1 (6-местная)
+                            option(value="Комната №1 (4-местная)") Комната №2 (4-местная)
+                            option(value="Комната №1 (6-местная)") Комната №3 (6-местная)
+                            option(value="Комната №1 (6-местная)") Комната №4 (4-местная)
+                    label
+                        input.clear(type="text" placeholder="Ввести номер карты")
+                .l-right
+                    .filed-title Дата
+                    label
+                        input.datepicker(type="text" value="22/03/2016")
+                
+                    label.small-label
+                        span Количество свободных мест 
+                        input(type="text" value="4")
+            .btn-center
+                button.btn.btn-main Забронировать номер
+
+        .popup__footer
+            p Номер Вашей карты нужен только для брони. До непосредственного заезда ваши денежные средства взыматься не будут.
+

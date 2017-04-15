@@ -1,0 +1,67 @@
+// Responsive Media quaries
+$step1: 1200px
+$step2: 992px
+$step3: 768px
+$step4: 480px
+$step5: 320px
+
+=r($media:step1)
+    @if $media == step1
+        // narrower than $width
+        @media only screen and (max-width: $step1)
+            @content
+    @else if $media == step2
+        @media only screen and (max-width: $step2)
+            @content
+    @else if $media == step3
+        @media only screen and (max-width: $step3)
+            @content
+    @else if $media == step4
+        @media only screen and (max-width: $step4)
+            @content
+    @else if $media == step5
+        @media only screen and (max-width: $step5)
+            @content
+
+
+//Clearfix
+=clr
+    &:after
+        content: " "
+        display: table
+        clear: both
+    *zoom: 1
+
+//rem font size with pixel fallback (rem I9+)
+// +fz(14px)
+=fz($sizeValue)
+    font-size: $sizeValue + px
+    font-size: ($sizeValue/10) + rem
+
+//px to em
+//usage font-size: em(32)
+//font-size: em(20, 24) 1 argument - px, 2 argument - parent
+$browser-context: 16 // Default
+
+@function em($pixels, $context: $browser-context)
+    @return #{$pixels/$context}em
+
+
+//Sprite short (Gulp)
+=s($icon)
+    +sprite($icon)
+
+//@font-face
+//+font(black, cytiapro-black-webfont)
+=font($alias, $name)
+    @font-face
+        font-family: $alias
+        src: url("../fonts/" + $name + ".eot")
+        src: url("../fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("../fonts/" + $name + ".woff") format("woff2"), url("../fonts/" + $name + ".woff") format("woff"), url("../fonts/" + $name + ".ttf") format("truetype"), url("../fonts/" + $name + ".svg#svgFontName") format("svg")
+
+//List Style None
+=list-none
+  margin: 0
+  padding: 0
+
+  list-style: none

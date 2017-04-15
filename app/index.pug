@@ -1,0 +1,48 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Чеширский Кот
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:300,400,700&subset=cyrillic', rel='stylesheet')
+    link(rel='stylesheet', href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU', type='text/javascript')
+    link(rel='stylesheet', href='css/main.css')
+
+    
+  body
+
+    include tpl/content.pug
+    include tpl/popups.pug
+
+    script(src='js/main.js')
+
+    script.
+      ymaps.ready(function () {
+      var myMap = new ymaps.Map('map', {
+      center: [43.5900890888106,39.73247524946],
+      zoom: 15,
+      controls: []
+      }, {
+      searchControlProvider: 'yandex#search'
+      }),
+      myPlacemark = new ymaps.Placemark([43.59057857453821,39.719621000000004], {
+      iconCaption: 'ул. Конституции, 18, этаж 3',
+      balloonContent: 'Cheshire Cat ул. Конституции, 18, этаж 3'
+      },{
+      preset: 'islands#blueCircleDotIconWithCaption',
+      }),
+      myPlacemark2 = new ymaps.Placemark([43.59057857453821,39.719621000000004], {
+      hintContent: 'ул. Конституции, 18, этаж 3',
+      balloonContent: 'Cheshire Cat ул. Конституции, 18, этаж 3',
+      zIndex: 1000
+      },{
+      iconLayout: 'default#image',
+      iconImageHref: 'img/baloon.png',
+      iconImageSize: [93, 124],
+      iconImageOffset: [3, 5]
+      });
+      myMap.geoObjects.add(myPlacemark);
+      myMap.geoObjects.add(myPlacemark2);
+      });

@@ -1,0 +1,38 @@
+/*************** Layout Styles ***************/
+%container
+  max-width: $container
+  width: 100%
+  margin: 0 auto
+  padding: 0 15px 0 18px
+
+  display: flex
+  flex-wrap: wrap
+  flex-direction: row
+
+%container-column
+  max-width: $container
+  width: 100%
+  margin: 0 auto
+  padding: 0 15px 0 18px
+
+  display: flex
+  flex-wrap: wrap
+  flex-direction: column
+
+
+
+@for $i from 1 through $grid-columns
+	.col-#{$i}
+    max-width: (100% / $grid-columns * $i)
+    flex-basis: (100% / $grid-columns * $i)
+    flex-grow: 1
+    padding: 0 15px
+
+    border: 1px solid #ccc
+
+
+
+//Width (%) depends on container
+//$container minus padding 30px
+=w($width: 100, $container-size: $container)
+    width: $width / $container-size *100%

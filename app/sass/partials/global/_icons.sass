@@ -1,0 +1,33 @@
+// Icons
+i
+  display: inline-block
+
+.icon-center
+  text-align: center
+
+.i
+  &-clock
+    +s($i-clock)
+
+.icon-menu
+  display: none
+
+  position: absolute
+  top: -2%
+  left: 4%
+  z-index: 2000
+  
+  width: 32px !important
+  height: 32px
+
+  cursor: pointer
+
+  svg
+    display: block
+    fill: #fff
+
+  .close
+    display: none
+
+  +r(step2)
+    display: block

@@ -1,0 +1,57 @@
+html, body
+  -webkit-backface-visibility:hidden
+
+html
+  box-sizing: border-box
+
+*,
+*:before,
+*:after
+  box-sizing: inherit
+
+
+
+body
+    margin: 0
+    padding: 0
+    min-width: 320px
+
+
+    font-family: $proximanova
+    font-size: $fz-default
+    line-height: $line-height
+    font-weight: 400
+
+    color: $text
+    background-color: $background
+
+    overflow-x: hidden
+
+a:link,
+a:hover,
+a:visited,
+a:active
+    text-decoration: none
+
+
+button:focus
+  outline: none
+
+
+.aos-animate
+ 
+  +r(step4)
+    transition-property: none !important
+    transform: none !important
+    animation: none !important
+
+
+@keyframes menu
+  0%
+    left: -100%
+  100%
+    left: 0
+
+
+
+  

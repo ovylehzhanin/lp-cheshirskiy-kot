@@ -1,0 +1,30 @@
+/*====== Fonts ======*/
+
++font('Magnolia', Magnolia/Magnolia-Script)
++font('ProximaNovaBold', ProximaNovaBold/ProximaNova-Bold)
++font('ProximaNovaRegular', ProximaNovaRegular/proxima_nova_regular)
+
+// Headers
+%title
+  margin: 0
+  padding: 0
+
+  font-size: $fz-title-h2
+  line-height: $line-height-title
+  font-family: $magnolia
+  color: $title
+  font-weight: 400
+
+
+%title-dark
+  @extend %title
+  color: $title-dark
+
+
+%title-white
+  @extend %title
+  color: $title-white
+
+
+%subtitle
+  font-size: $fz-subtitle
